@@ -155,3 +155,28 @@
     color: #343434;
     margin-top: 40px;
   }
+
+  @media (max-width:500px) {
+    .signup-box{
+     
+      width: 320px;
+      height: 530px;
+    }
+    .signup-box::before
+    {
+      
+      width: 290px;
+      height: 380px;
+    }
+    
+    .signup-form{
+      padding: 50px 40px;
+      border-radius: 8px;
+    } 
+    .inputbox{
+    position: relative;
+    width: 230px;
+    margin-top: 35px;
+    }
+  
+  }

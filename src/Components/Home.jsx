@@ -5,7 +5,7 @@ import '../Styles/Home.css';
 const Home = () => {
 let[loc ,setloc]=useState("");
 
-// search list
+// search list trail
 
 // let[list ,setlist]=useState("");
 // let[error ,seterror]=useState("");

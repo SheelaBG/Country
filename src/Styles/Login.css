@@ -154,3 +154,27 @@
     color: #343434;
     margin-top: 40px;
   }
+  @media (max-width:500px) {
+    .login-box{
+     
+      width: 290px;
+      height: 380px;
+    }
+    .login-box::before
+    {
+      
+      width: 290px;
+      height: 380px;
+    }
+    
+    .login-form{
+      padding: 50px 30px;
+      border-radius: 8px;
+    } 
+    .l-inputbox{
+    position: relative;
+    width: 230px;
+    margin-top: 35px;
+    }
+  
+  }

@@ -40,3 +40,37 @@ img{
     border: none;
     outline: none;
 }
+@media (max-width:500px) {
+    h1{
+        position: absolute;
+        top: 40px;
+        left: 20%;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    img{
+        height: 100vh;
+        width: 100vw;
+    }
+    .SearchDiv input{
+        height: 25px;
+        width: 150px;
+        border-radius: 5px;
+        border: 2px solid black;
+        outline: none;
+        padding-left: 10px;
+    }
+    
+    .SearchDiv button{
+        position: relative;
+        right: 3px;
+        height: 25px;
+        width: 60px;
+        background-color: red;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+}
