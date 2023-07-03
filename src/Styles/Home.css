@@ -1,0 +1,42 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    position: absolute;
+    top: 40px;
+    left: 42%;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+img{
+    height: 100vh;
+    width: 100vw;
+}
+.SearchDiv{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50px,-50px);
+}
+.SearchDiv input{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline: none;
+    padding-left: 10px;
+}
+
+.SearchDiv button{
+    position: relative;
+    right: 3px;
+    height: 32px;
+    width: 80px;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
