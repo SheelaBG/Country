@@ -4,6 +4,7 @@ const CountryDetails = ({country}) => {
 
     return ( 
         <div>
+            
             <div className="images">
                 <div>
                 <img src={country.flags.svg} alt="img not found"/>
@@ -29,7 +30,7 @@ const CountryDetails = ({country}) => {
             <h3><b>GoogleMap : </b><a href={country.maps.googleMaps} target="blank">{country.maps.googleMaps}</a></h3>
             {/* <p>Languages : {lang}</p> */}
             <h3><b>Symbol : </b><a href={country.coatOfArms.svg} target="blank">{country.coatOfArms.svg}</a></h3>
-             <Link to="/"><button>Home</button></Link>
+             <Link to="/home"><button>Home</button></Link>
             </div>
         </div>
      );

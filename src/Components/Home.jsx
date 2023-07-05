@@ -2,31 +2,34 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Home.css';
 
+
 const Home = () => {
 let[loc ,setloc]=useState("");
 
-// search list trail
+let[list ,setlist]=useState([])
 
-// let[list ,setlist]=useState("");
-// let[error ,seterror]=useState("");
-
-// useEffect(() => {
-//     setTimeout(()=>{
-//       fetch("https://restcountries.com/v3.1/all")
-//         .then((res) => {
-//             console.log(res);
-//                 return res.json()
-//         })
-//               .then((data) => {
-//                 let coun= data.filter((d,i)=>{ return d[i].name.common.includes("India")})
-//                 console.log(data);
-//                 })
-//                 .catch((err)=>{
-//                     seterror("404 Network issue...!!! please try agian later") 
-//             })  
-//     },500)
+useEffect(() => {
+   
+    setTimeout(()=>{
+      fetch("https://restcountries.com/v3.1/all")
+        .then((res) => {
+                return res.json()
+        })
+              .then((data) => {
+                let names=data.map((v)=>{
+                    return v.name.common;
+                })
+                let name=names.filter((n)=>{return n.toLowerCase().startsWith(loc.toLowerCase())})
+                console.log(name);
+                setlist(name);
+                
+                })
+                .catch((err)=>{
+                    alert("Network Error or 404 NOT FOUND...");
+            })  
+    },500)
       
-//   },[]);
+  },[loc]);
   
 
     return ( 
@@ -40,18 +43,18 @@ let[loc ,setloc]=useState("");
        
          </div>
          </div>
-        {/* {list!="" && <div className="suggestion-div">
+        {loc!="" && <div className="suggestion-div">
            
            <ul>
                 {list.map((d)=>{
                     return (
-                        <Link to={`/country/${loc}`}>
-                            <li onClick={()=>{(setloc(""))}}>{list}</li>
+                        <Link to={`/country/${d}`}>
+                            <li onClick={()=>{(setloc(""))}}>{d}</li>
                         </Link>
                     )
                 }) }
             </ul>
-        </div>} */}
+        </div>}
 
         </>
      );
